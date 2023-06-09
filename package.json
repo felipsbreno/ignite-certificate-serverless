@@ -4,8 +4,7 @@
   "description": "Serverless aws-nodejs-typescript template",
   "main": "serverless.ts",
   "scripts": {
-    "lint": "eslint src --ext .ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/functions --ext .ts --fix"
   },
   "engines": {
     "node": ">=14.15.0"
@@ -23,6 +22,7 @@
     "json-schema-to-ts": "^1.5.0",
     "serverless": "^3.0.0",
     "serverless-esbuild": "^1.23.3",
+    "serverless-offline": "^12.0.4",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3"
