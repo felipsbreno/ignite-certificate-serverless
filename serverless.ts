@@ -1,6 +1,4 @@
-import type { AWS } from '@serverless/typescript';
-
-import hello from '@functions/hello';
+import type { AWS } from '@serverless/typescript'
 
 const serverlessConfiguration: AWS = {
   service: 'ignitecertificate',
@@ -19,7 +17,7 @@ const serverlessConfiguration: AWS = {
     },
   },
   // import the function via paths
-  functions: { hello },
+  functions: {},
   package: { individually: true },
   custom: {
     esbuild: {
@@ -33,6 +31,6 @@ const serverlessConfiguration: AWS = {
       concurrency: 10,
     },
   },
-};
+}
 
-module.exports = serverlessConfiguration;
+module.exports = serverlessConfiguration
