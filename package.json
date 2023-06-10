@@ -4,14 +4,16 @@
   "description": "Serverless aws-nodejs-typescript template",
   "main": "serverless.ts",
   "scripts": {
-    "lint": "eslint src/functions --ext .ts --fix"
+    "lint": "eslint src --ext .ts --fix",
+    "dev": "serverless offline"
   },
   "engines": {
     "node": ">=14.15.0"
   },
   "dependencies": {
     "@middy/core": "^3.4.0",
-    "@middy/http-json-body-parser": "^3.4.0"
+    "@middy/http-json-body-parser": "^3.4.0",
+    "aws-sdk": "^2.1395.0"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
@@ -21,6 +23,7 @@
     "esbuild": "^0.14.11",
     "json-schema-to-ts": "^1.5.0",
     "serverless": "^3.0.0",
+    "serverless-dynamodb-local": "^0.2.40",
     "serverless-esbuild": "^1.23.3",
     "serverless-offline": "^12.0.4",
     "ts-node": "^10.4.0",
