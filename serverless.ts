@@ -22,7 +22,7 @@ const serverlessConfiguration: AWS = {
   },
   // import the function via paths
   functions: {
-    hello: {
+    generateCertificate: {
       handler: 'src/functions/generateCertificate.handler',
       events: [
         {
@@ -46,6 +46,14 @@ const serverlessConfiguration: AWS = {
       define: { 'require.resolve': undefined },
       platform: 'node',
       concurrency: 10,
+    },
+    dynamodb: {
+      stages: ['dev', 'local'],
+      start: {
+        port: 8000,
+        inMemory: true,
+        migrate: true,
+      },
     },
   },
   resources: {
